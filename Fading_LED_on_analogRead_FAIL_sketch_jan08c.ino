@@ -1,20 +1,20 @@
-int photoPin = 0;
-#define lightValue analogRead(photoPin)
-int obLed = 13;
-int brightness = 0;
-int newBrightness = lightValue / 4;
+int photoPin = A0;
+int blueLed = 3;
+
 
 void setup()
 {
   Serial.begin(9600);
-  pinMode(obLed, OUTPUT);
+  pinMode(blueLed, OUTPUT);
 }
 
 void loop()
 {
+  int lightValue = analogRead(photoPin);
+  int newBrightness = lightValue / 8;
   Serial.println(lightValue);
   Serial.println(newBrightness);
-  analogWrite(obLed, newBrightness);
-  delay(1000);
+  analogWrite(blueLed, newBrightness);
+  delay(30);
 }
 
