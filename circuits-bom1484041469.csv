@@ -1,6 +1,7 @@
 Circuits.io Bill Of Materials
 IDS,#,Component,Footprint,Properties
-U1,1,Arduino Uno R3  The official Arduino Uno Rev3,Arduino Uno R3,"int photoPin = A0;
+U1,1,Arduino Uno R3  The official Arduino Uno Rev3,Arduino Uno R3,"
+int photoPin = A0;
 int blueLed = 3;
 
 void setup()
