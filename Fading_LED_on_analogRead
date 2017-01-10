@@ -13,9 +13,11 @@ void loop()
 {
   int lightValue = analogRead(photoPin);
   int newBrightness = lightValue / 4;
+  
   Serial.println(lightValue);
   Serial.println(newBrightness);
   analogWrite(blueLed, newBrightness);
+  
   if (lightValue >= 950 && lightValue <= 1000)
   {
     analogWrite(blueLed, fullBrightness); //in order to create a full on LED
@@ -26,7 +28,5 @@ void loop()
     analogWrite(blueLed, off); //in order to create a full off LED
     Serial.println("OFF"); //debug
   }
-  
-  
   delay(30);
 }
