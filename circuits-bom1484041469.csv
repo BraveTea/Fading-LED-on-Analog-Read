@@ -1,5 +1,4 @@
 Circuits.io Bill Of Materials
-
 U1,1,Arduino Uno R3  The official Arduino Uno Rev3,Arduino Uno R3,"
 int photoPin = A0;
 int blueLed = 3;
